@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flask Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Add a post to the Flask Blog!</h1>
+    <form method = 'POST' action="/add" >
+        <div class="post">
+        <label for="author">Name:</label><br>
+        <input type="text" id="author" name="author" placeholder="John Doe" required><br>
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" placeholder="Post Title" required><br>
+        <label for="content">Content:</label><br>
+        <textarea id="content" name="content" placeholder="This is my blog post..." required></textarea><br>
+        <input type="submit" value="Post">
+        </div>
+    </form>
+</body>
+</html>
